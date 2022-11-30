@@ -15,12 +15,12 @@ import java.math.BigDecimal;
  */
 @Data
 public class OuterTransactionRequestDto {
-    @NotNull
+    @NotNull(message = "client id should not be empty")
     private Long clientId;
-    @NotNull
+    @NotNull(message = "from Account Number should not be empty")
     private Long fromAccountNumber;
-    @NotNull
+    @NotNull(message = "to Account Number should not be empty")
     private Long toAccountNumber;
-    @NotNull
+    @NotNull(message = "sum should not be empty")
     private BigDecimal sum;
 }

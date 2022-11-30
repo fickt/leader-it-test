@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 @Data
 public class NewCashOrderRequest {
-    @NotNull
+    @NotNull(message = "account id should not be empty")
     private Long accountId;
-    @NotBlank
+    @NotBlank(message = "order type should not be empty")
     private String orderType;
-    @NotNull
+    @NotNull(message = "sum should not be empty")
     private BigDecimal sum;
 }

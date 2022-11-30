@@ -16,12 +16,12 @@ import java.math.BigDecimal;
  */
 @Data
 public class InnerTransactionRequestDto {
-    @NotNull
+    @NotNull(message = "client id should not be empty")
     private Long clientId;
-    @NotNull
+    @NotNull(message = "from account should not be empty")
     private Long fromAccountNumber;
-    @NotNull
+    @NotNull(message = "to account should not be empty")
     private Long toAccountNumber;
-    @NotNull
+    @NotNull(message = "sum should not be empty")
     private BigDecimal sum;
 }
